@@ -17,5 +17,6 @@ public class MainActivity  {
         student.setAge(12);
         student.setWeight(85);
         student.setYearOfStudy(3);
+        student.increaseYearOfStudy();
     }
 }
