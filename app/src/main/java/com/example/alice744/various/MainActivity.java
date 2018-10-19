@@ -4,7 +4,6 @@ import com.example.alice744.various.man.Man;
 import com.example.alice744.various.man.Student;
 
 public class MainActivity  {
-
     public static void main(String[] args) {
 
         Man man = new Man();
@@ -17,9 +16,6 @@ public class MainActivity  {
         student.setName("b");
         student.setAge(12);
         student.setWeight(85);
-        student.setYearOfStudy(8);
-
-
-        // write your code here
+        student.setYearOfStudy(3);
     }
 }

@@ -6,8 +6,7 @@ public class Man {
     private  int age;
     private  int weight;
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name=name;
     }
     public void setAge(int age){
@@ -17,5 +16,4 @@ public class Man {
     public void setWeight(int weight) {
         this.weight=weight;
     }
-
 }
