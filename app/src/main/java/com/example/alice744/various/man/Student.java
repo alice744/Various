@@ -10,12 +10,9 @@ public class Student extends Man{
         else if (yearOfStudy<0){
             System.out.println("Школьник");
         }
-        else if (yearOfStudy >= 1 || yearOfStudy <= 6){
+        else if (yearOfStudy >= 1 && yearOfStudy <= 5){
             this.yearOfStudy=yearOfStudy;
-            increaseYearOfStudy();
+            yearOfStudy++;
         }
-    }
-    public void increaseYearOfStudy(){
-        yearOfStudy++;
     }
 }
