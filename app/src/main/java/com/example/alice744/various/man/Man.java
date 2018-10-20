@@ -10,7 +10,6 @@ public class Man {
         this.name=name;
     }
     public void setAge(int age){
-
         this.age=age;
     }
     public void setWeight(int weight) {
