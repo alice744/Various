@@ -8,5 +8,6 @@ public class Lorry extends Car {
     }
     public void setModel(String model){
         super.model=model;
+
     }
 }

@@ -8,7 +8,8 @@ public class MainActivity  {
 
         Man man = new Man();
         Student student = new Student();
-
+        student.increaseYearOfStudy();
+        student.setYearOfStudy(6);
         man.setName("a");
         man.setAge(1);
         man.setWeight(8);
@@ -16,7 +17,7 @@ public class MainActivity  {
         student.setName("b");
         student.setAge(12);
         student.setWeight(85);
-        student.setYearOfStudy(3);
-        student.increaseYearOfStudy();
+
+
     }
 }
