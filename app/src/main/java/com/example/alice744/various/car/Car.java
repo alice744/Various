@@ -5,6 +5,7 @@ public class Car {
     public int carWeight;
     public int power;
 
+
     public void setPower(int power) {
         this.power = power;
     }
