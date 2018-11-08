@@ -6,7 +6,7 @@ import com.example.alice744.various.flowers.Flower;
 
 public class MainActivity  {
     public static void main(String[] args) { ;
-    Lorry lorry=new Lorry("a",8,9);
+    Lorry lorry=new Lorry("a",8,9,89);
     Lorry lorry1=new Lorry();
     }
 }

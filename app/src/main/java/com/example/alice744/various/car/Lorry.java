@@ -1,12 +1,12 @@
 package com.example.alice744.various.car;
 
 public class Lorry extends Car {
-    public int capacity;
+    private int capacity;
 
     public Lorry(){
 
     }
-    public Lorry(String model,int carWeight,int power){
+    public Lorry(String model,int carWeight,int power, int capacity){
         super(model,carWeight,power);
         this.capacity=capacity;
     }

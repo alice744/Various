@@ -2,8 +2,8 @@ package com.example.alice744.various.car;
 
 public class Car {
     public String model;
-    public int carWeight;
-    public int power;
+    private int carWeight;
+    private int power;
 
     public Car(){
 
