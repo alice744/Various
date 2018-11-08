@@ -1,7 +1,7 @@
 package com.example.alice744.various.car;
 
 public class Car {
-    public String model;
+    protected String model;
     private int carWeight;
     private int power;
 
