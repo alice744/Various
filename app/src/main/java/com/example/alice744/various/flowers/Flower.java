@@ -1,11 +1,10 @@
 package com.example.alice744.various.flowers;
-import com.example.alice744.various.flowers.Flower;
-public class Flower extends Bouquet{
-    protected int price;
-    protected int quantity;
 
-    public Flower(int price,int quantity){
-        this.price=price;
-        this.quantity=quantity;
+public class Flower{
+    protected int price;
+    protected int height=90;
+    protected String color="none";
+    public String getColor(String color){
+        return color;
     }
 }

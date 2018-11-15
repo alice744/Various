@@ -1,10 +1,42 @@
 package com.example.alice744.various.flowers;
 
-public class Bouquet {
-    public static void main(String[] args){
-        Rose rose=new Rose(50,4);
-        Tulip tulip=new Tulip(70,3);
-        Carnation carnation=new Carnation(30,6);
-        System.out.println(rose.getPrice()*rose.getQuantity()+tulip.getPrice()*tulip.getQuantity()+carnation.getPrice()*carnation.getQuantity());
+import java.util.ArrayList;
+import java.util.List;
+
+public class Bouquet extends Flower{
+
+    private List<Flower> carnation=new ArrayList<Flower>();
+    private List<Flower> rose=new ArrayList<Flower>();
+    private List<Flower> tulip=new ArrayList<Flower>();
+    public void addFlower(Rose rose){
+        this.rose.add(rose);
+    }
+    public void addFlower(Tulip tulip){
+        this.tulip.add(tulip);
+    }
+    public void addFlower(Carnation carnation){
+        this.carnation.add(carnation);
+    }
+    public void addRose(int quantity){
+        for (int i=0;i<500;i++){
+            rose.add(new Rose(50));
+        }
+    }
+    public void addTulip(int quantity){
+        for(int i=0;i<7;i++) {
+            tulip.add(new Tulip(70));
+        }
+    }
+    public void addCarnation(int quantity){
+        for(int i=0;i<156;i++) {
+            carnation.add(new Carnation(30));
+        }
+    }
+    public String getQuantity(){
+        return "rose: "+rose.size()+", tulip: "+tulip.size()+", carnation: "+carnation.size();
+    }
+    public int getPriceBouquet(){
+             return rose.size()+tulip.size()+carnation.size();
     }
 }
+//стоимость
