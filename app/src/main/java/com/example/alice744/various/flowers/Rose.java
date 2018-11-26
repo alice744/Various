@@ -1,8 +1,7 @@
 package com.example.alice744.various.flowers;
 
 public class Rose extends Flower{
-
-    public Rose(int price){
+       public Rose(int price){
             this.price=price;
             this.color="red";
     }
@@ -16,13 +15,9 @@ public class Rose extends Flower{
         this.height=height;
         this.color=color;
     }
-    public void setPrice(int price) {
-        this.price = price;
-    }
     public void setHeight(int height){
         this.height=height;
     }
-
     public int getPrice() {
         return this.price;
     }
