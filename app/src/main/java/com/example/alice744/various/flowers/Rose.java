@@ -1,6 +1,7 @@
 package com.example.alice744.various.flowers;
 
 public class Rose extends Flower{
+    public Rose(){}
        public Rose(int price){
             this.price=price;
             this.color="red";

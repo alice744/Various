@@ -8,9 +8,6 @@ public class Bouquet extends Flower{
     private List<Flower> carnation=new ArrayList<Flower>();
     private List<Flower> rose=new ArrayList<Flower>();
     private List<Flower> tulip=new ArrayList<Flower>();
-    Rose rose1=new Rose(50);
-    Tulip tulip1=new Tulip(70);
-    Carnation carnation1=new Carnation(30);
     public void addFlower(Rose rose){
         this.rose.add(rose);
     }
@@ -20,30 +17,8 @@ public class Bouquet extends Flower{
     public void addFlower(Carnation carnation){
         this.carnation.add(carnation);
     }
-    public int addRose(int quantity){
-        for (int i=0;i<quantity;i++){
-            rose.add(new Rose(50));
-        }
-        return quantity;
-    }
-    public int addTulip(int quantity){
-        for(int i=0;i<quantity;i++) {
-            tulip.add(new Tulip(70));
-        }
-        return quantity;
-    }
-    public int addCarnation(int quantity){
-        for(int i=0;i<quantity;i++) {
-            carnation.add(new Carnation(30));
-        }
-        return quantity;
-    }
     public String getQuantity(){
         return "rose: "+rose.size()+", tulip: "+tulip.size()+", carnation: "+carnation.size();
-    }
-    public int getPriceBouquet(){
-             return addRose(4)*rose1.getPrice()+addTulip(2)*tulip1.getPrice()
-                     +addCarnation(3)*carnation1.getPrice();
     }
     public int addManyRose(int price,int quantity){
         for (int i=0;i<quantity;i++){

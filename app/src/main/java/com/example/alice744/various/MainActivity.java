@@ -8,7 +8,6 @@ public class MainActivity  {
     public static void main(String[] args){
         ArrayList<Flower> flowers=new ArrayList<Flower>();
         Bouquet bouquet=new Bouquet();
-        System.out.println(bouquet.getPriceBouquet());
         System.out.println(bouquet.getPriceManyFlowersInBouquet());
     }
 }
