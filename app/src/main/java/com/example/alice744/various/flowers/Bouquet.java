@@ -3,43 +3,59 @@ package com.example.alice744.various.flowers;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bouquet extends Flower{
+public class Bouquet extends Flower {
+    private int bouquetPrice;
+    private List<Rose> rosesList = new ArrayList<Rose>();
+    private List<Tulip> tulipsList = new ArrayList<Tulip>();
+    private List<Carnation> carnationsList = new ArrayList<Carnation>();
 
-    private List<Flower> carnation=new ArrayList<Flower>();
-    private List<Flower> rose=new ArrayList<Flower>();
-    private List<Flower> tulip=new ArrayList<Flower>();
-    public void addFlower(Rose rose){
-        this.rose.add(rose);
+    public void addFlower(Rose rose) {
+        this.rosesList.add(rose);
     }
-    public void addFlower(Tulip tulip){
-        this.tulip.add(tulip);
+
+    public void addFlower(Tulip tulip) {
+        this.tulipsList.add(tulip);
     }
-    public void addFlower(Carnation carnation){
-        this.carnation.add(carnation);
+
+    public void addFlower(Carnation carnation) {
+        this.carnationsList.add(carnation);
     }
-    public String getQuantity(){
-        return "rose: "+rose.size()+", tulip: "+tulip.size()+", carnation: "+carnation.size();
+
+    public String getQuantity() {
+        return "rose: " + rosesList.size() + ", tulip: " + tulipsList.size() + ", carnation: " + carnationsList.size();
     }
-    public int addManyRose(int price,int quantity){
-        for (int i=0;i<quantity;i++){
-            rose.add(new Rose(price));
+
+    public void addManyRose(int quantity) {
+        for (int i = 0; i < quantity; i++) {
+            rosesList.add(new Rose());
         }
-        return price*quantity;
     }
-    public int addManyTulip(int price,int quantity){
-        for (int i=0;i<quantity;i++){
-            tulip.add(new Tulip(price));
+
+    public void addManyTulip(int price, int quantity) {
+        for (int i = 0; i < quantity; i++) {
+            tulipsList.add(new Tulip(price));
         }
-        return price*quantity;
     }
-    public int addManyCarnation(int price,int quantity){
-        for (int i=0;i<quantity;i++){
-            carnation.add(new Tulip(price));
+
+    public void addManyCarnation(int price, int quantity) {
+        for (int i = 0; i < quantity; i++) {
+            carnationsList.add(new Carnation(price));
         }
-        return price*quantity;
     }
-    public int getPriceManyFlowersInBouquet(){
-        return addManyRose(50, 800)+addManyTulip(30,50)+
-                addManyCarnation(70,5);
+
+    public int getBouquetPrice() {
+        for (int i = 0; i < rosesList.size(); i++) {
+            Rose roseItem = rosesList.get(i);
+            bouquetPrice += roseItem.getPrice();
+        }
+        for (int i = 0; i < tulipsList.size(); i++) {
+            Tulip tulipItem = tulipsList.get(i);
+            bouquetPrice += tulipItem.getPrice();
+        }
+        for (int i = 0; i < carnationsList.size(); i++) {
+            Carnation carnationItem = carnationsList.get(i);
+            bouquetPrice += carnationItem.getPrice();
+        }
+        return bouquetPrice;
     }
 }
