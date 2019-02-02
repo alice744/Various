@@ -3,7 +3,7 @@ package com.example.alice744.various.flowers;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bouquet extends Flower {
+public class Bouquet {
     private int bouquetPrice;
     private List<Rose> rosesList = new ArrayList<Rose>();
     private List<Tulip> tulipsList = new ArrayList<Tulip>();
@@ -25,9 +25,9 @@ public class Bouquet extends Flower {
         return "rose: " + rosesList.size() + ", tulip: " + tulipsList.size() + ", carnation: " + carnationsList.size();
     }
 
-    public void addManyRose(int quantity) {
+    public void addManyRose(int price, int quantity) {
         for (int i = 0; i < quantity; i++) {
-            rosesList.add(new Rose());
+            rosesList.add(new Rose(price));
         }
     }
 
@@ -56,6 +56,9 @@ public class Bouquet extends Flower {
             Carnation carnationItem = carnationsList.get(i);
             bouquetPrice += carnationItem.getPrice();
         }
+        rosesList.clear();
+        tulipsList.clear();
+        carnationsList.clear();
         return bouquetPrice;
     }
 }
