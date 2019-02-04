@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bouquet {
-    private int bouquetPrice;
     private List<Rose> rosesList = new ArrayList<Rose>();
     private List<Tulip> tulipsList = new ArrayList<Tulip>();
     private List<Carnation> carnationsList = new ArrayList<Carnation>();
@@ -43,7 +42,8 @@ public class Bouquet {
         }
     }
 
-    public int getBouquetPrice() {
+       public int getBouquetPrice() {
+        int bouquetPrice = 0;
         for (int i = 0; i < rosesList.size(); i++) {
             Rose roseItem = rosesList.get(i);
             bouquetPrice += roseItem.getPrice();
@@ -56,9 +56,6 @@ public class Bouquet {
             Carnation carnationItem = carnationsList.get(i);
             bouquetPrice += carnationItem.getPrice();
         }
-        rosesList.clear();
-        tulipsList.clear();
-        carnationsList.clear();
         return bouquetPrice;
     }
 }
