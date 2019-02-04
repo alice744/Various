@@ -42,7 +42,7 @@ public class Bouquet {
         }
     }
 
-       public int getBouquetPrice() {
+    public int getBouquetPrice() {
         int bouquetPrice = 0;
         for (int i = 0; i < rosesList.size(); i++) {
             Rose roseItem = rosesList.get(i);
