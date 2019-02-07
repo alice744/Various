@@ -20,8 +20,8 @@ public class Bouquet {
         this.carnationsList.add(carnation);
     }
 
-    public String getQuantity() {
-        return "rose: " + rosesList.size() + ", tulip: " + tulipsList.size() + ", carnation: " + carnationsList.size();
+    public int getQuantity() {
+        return rosesList.size() + tulipsList.size() + carnationsList.size();
     }
 
     public void addManyRose(int price, int quantity) {
