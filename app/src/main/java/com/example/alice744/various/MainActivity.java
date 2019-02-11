@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
         bouquet.addManyTulip(30, 70);
         Log.d(TAG, "добавление гвоздик в букет");
         bouquet.addManyCarnation(20, 100);
-        Log.d(TAG, "количество цветов букете");
-        System.out.println(bouquet.getQuantity());
+        Log.d(TAG, "количество цветов букете:" + bouquet.getQuantity());
     }
 
     public static void main(String[] args) {
