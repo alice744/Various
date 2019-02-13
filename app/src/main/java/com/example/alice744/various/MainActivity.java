@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.alice744.various.flowers.Bouquet;
+import com.example.alice744.various.logs.Logger;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,17 +18,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Bouquet bouquet = new Bouquet();
-        Log.d(TAG, "добавление роз в букет");
+        Logger logger = new Logger();
+        logger.log("добавление роз в букет");
         bouquet.addManyRose(40, 80);
-        Log.d(TAG, "добавление тюльпанов в букет");
+        logger.log("добавление тюльпанов в букет");
         bouquet.addManyTulip(30, 70);
-        Log.d(TAG, "добавление гвоздик в букет");
+        logger.log("добавление гвоздик в букет");
         bouquet.addManyCarnation(20, 100);
-        Log.d(TAG, "количество цветов букете:" + bouquet.getQuantity());
+        logger.log("количество цветов букете:" + bouquet.getQuantity());
     }
-
-    public static void main(String[] args) {
-
-    }
-
 }
