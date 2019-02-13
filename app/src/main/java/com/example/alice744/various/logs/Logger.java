@@ -3,7 +3,7 @@ package com.example.alice744.various.logs;
 import android.util.Log;
 
 public class Logger {
-    private static final String TAG = "Logger";
+    private static final String TAG = "MainActivity";
 
     public void log(String massage) {
         Log.d(TAG, massage);
