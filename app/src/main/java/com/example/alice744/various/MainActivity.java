@@ -3,22 +3,20 @@ package com.example.alice744.various;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+
 
 import com.example.alice744.various.flowers.Bouquet;
 import com.example.alice744.various.logs.Logger;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static final String TAG = "myLogs";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Bouquet bouquet = new Bouquet();
-        Logger logger = new Logger();
+        Logger logger = new Logger(this.getClass().getName());
+
         logger.log("добавление роз в букет");
         bouquet.addManyRose(40, 80);
         logger.log("добавление тюльпанов в букет");

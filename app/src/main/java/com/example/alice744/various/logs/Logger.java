@@ -1,9 +1,14 @@
 package com.example.alice744.various.logs;
 
+
 import android.util.Log;
 
 public class Logger {
-    private static final String TAG = "MainActivity";
+    private String TAG = "log";
+
+    public Logger(String TAG) {
+        this.TAG = TAG;
+    }
 
     public void log(String massage) {
         Log.d(TAG, massage);
