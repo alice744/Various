@@ -4,7 +4,7 @@ package com.example.alice744.various.logs;
 import android.util.Log;
 
 public class Logger {
-    private String TAG = "log";
+    private final String TAG;
 
     public Logger(String TAG) {
         this.TAG = TAG;
